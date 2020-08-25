@@ -1,11 +1,21 @@
 import React from 'react';
-import CalendarCS from '../CalendarCS/CalendarCS';
+import './Home.css'
+
+import PrimaryBtn from '../PrimaryBtn/PrimaryBtn';
+import BgImg from '../BgImg/BgImg';
 
 const Home = () => {
     return (
-        <div>
-            <h2>home component</h2>
-            <CalendarCS />
+        <div className='home'>
+            <div className="homeText bg">
+                <h1>Your New Smile Starts Here</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus tempore molestias quis inventore tempora quasi a, optio provident debitis ex error quos illo culpa laborum incidunt laudantium</p>
+                <PrimaryBtn>GET APPOINTMENT</PrimaryBtn>
+            </div>
+            <div className='deepBlue homeSide'>
+                <BgImg goTo='/appointment'></BgImg>
+            </div>
+
         </div>
     );
 };

@@ -1,0 +1,18 @@
+.navItemContainer {
+  display: flex;
+  position: absolute;
+  right: 47px;
+  margin: 20px 8px;
+}
+.navItemContainer li {
+  padding: 5px 1.3rem;
+  list-style: none;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+.black {
+  color: black;
+}
+.white {
+  color: white;
+}

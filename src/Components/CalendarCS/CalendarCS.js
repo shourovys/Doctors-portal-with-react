@@ -4,10 +4,12 @@ import 'react-calendar/dist/Calendar.css';
 
 function CalendarCS() {
     const [value, onChange] = useState(new Date());
+
     const selectedDay = value.getDate()
     const selectedMonth = value.getMonth()
     const selectedYear = value.getFullYear()
-    console.log(selectedDay, selectedMonth, selectedYear);
+
+
 
     return (
         <div>

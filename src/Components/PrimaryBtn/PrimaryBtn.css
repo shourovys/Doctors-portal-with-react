@@ -1,0 +1,11 @@
+.primaryBtn {
+  width: 12rem;
+  padding: 0.8rem;
+  font-size: 1.05rem;
+  color: white;
+  background-image: linear-gradient(to right, #1befdef5, #18d0e7f5);
+  border: none;
+  margin: 14px 0px;
+  outline: none;
+  cursor: pointer;
+}

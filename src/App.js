@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Home from './Components/Home/Home';
+import HomeContainer from './Components/HomeContainer/HomeContainer';
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <HomeContainer />
     </div>
   );
 }

@@ -1,0 +1,33 @@
+.home {
+  display: flex;
+  height: 100vh;
+}
+.homeText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.3rem;
+  width: 72vw;
+  padding: 0rem 27rem 0rem 4rem;
+}
+.bg::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0px;
+  background-image: url(/static/media/Home.f112c368.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+.homeText P {
+  color: rgb(143, 140, 140);
+  font-size: 14px;
+  line-height: 18px;
+}
+.deepBlue {
+  background-color: rgb(59, 77, 95);
+  width: 28vw;
+}
