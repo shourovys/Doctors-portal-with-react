@@ -1,0 +1,11 @@
+.BookAppointForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.BookAppointForm input {
+  padding: 10px 14px;
+  margin: 10px 22px;
+  width: 500px;
+}
