@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css'
+import { useParams } from 'react-router-dom';
 const Navbar = () => {
     const [currentURL, setCurrentURL] = useState('')
     useEffect(() => {
         setCurrentURL(window.location.href)
-
-    }, [])
-    let classNm = 'white'
+    }, [useParams()])
+    let classNm = 'black'
     if (currentURL === 'http://localhost:3000/') {
-        classNm = 'black'
+        classNm = 'white'
     }
+
 
 
     return (
