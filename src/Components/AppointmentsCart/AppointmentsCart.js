@@ -21,23 +21,27 @@ const useStyles = makeStyles({
 });
 
 const AppointmentsCart = (props) => {
+    const { appointType, time, spences, id } = props.appointment
+
+
+
     const classes = useStyles();
     return (
         <Card className={classes.root} className='AppointmentCard'>
 
             <Typography variant="h5" component="h2" className='primary-color h-third'>
-                Teeth Wash
-                 </Typography>
+                {appointType}
+            </Typography>
             <Typography className={classes.pos} component="h5">
-                10.00AM - 11.00AM
-                 </Typography>
+                {time}
+            </Typography>
             <Typography variant="body2" className='paragraph' component="p">
-                10 SPENCES AVAILABLE
-                </Typography>
+                {spences} SPENCES AVAILABLE
+            </Typography>
 
 
-            <CardActions>
-                <BookAppointBox />
+            <CardActions >
+                <BookAppointBox appointType={appointType} appointId={id} />
             </CardActions>
 
         </Card>

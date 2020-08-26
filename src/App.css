@@ -8,7 +8,7 @@
   --primary-color: #1befdef5;
 } */
 .primary-color {
-  color: #1befdef5;
+  color: #1befdef5 !important;
 }
 .text-center {
   text-align: center;

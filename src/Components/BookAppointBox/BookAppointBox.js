@@ -8,7 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import BookAppointForm from '../BookAppointForm/BookAppointForm';
 import './BookAppointBox.css'
 
-const BookAppointBox = () => {
+const BookAppointBox = (props) => {
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -30,25 +30,19 @@ const BookAppointBox = () => {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
-                <DialogTitle className='primary-colour text-center' id="alert-dialog-title">{"Teeth Cleaning"}</DialogTitle>
+                <DialogTitle className='primary-color .h-third text-center' id="alert-dialog-title">{props.appointType}</DialogTitle>
 
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
 
-                        <BookAppointForm />
+                        <BookAppointForm appointId={props.appointId} handleClose={handleClose} />
 
                     </DialogContentText>
                 </DialogContent>
 
 
                 <DialogActions>
-                    <button
-                        className='primaryBtn'
-                        id='cardBtn'
-                        onClick={handleClose}
-                    >
-                        Done
-                     </button>
+
                 </DialogActions>
             </Dialog>
         </div>

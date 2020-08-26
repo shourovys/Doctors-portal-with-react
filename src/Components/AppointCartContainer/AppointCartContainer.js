@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import './AppointCartContainer.css'
 import AppointmentsCart from '../AppointmentsCart/AppointmentsCart';
-import BookAppointBox from '../BookAppointBox/BookAppointBox';
+import AppointmentsData from '../../FakeData/FakeData';
 
 const AppointCartContainer = () => {
-    const cartData = [1, 2, 3, 4, 5, 6]
-
+    const appointmentData = AppointmentsData
+    console.log(appointmentData);
 
     return (
         <div className='AppointCartContainer'>
             <h1 className='primary-color text-center h-seconder'>Available Appointment on Friday </h1>
             <div className="carts">
                 {
-                    cartData.map(data =>
+                    appointmentData.map(appointment =>
                         <AppointmentsCart
-                            data={data}
+                            appointment={appointment}
+                            key={appointment.id}
                         >
                         </AppointmentsCart>)
                 }

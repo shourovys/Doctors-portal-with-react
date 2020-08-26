@@ -2,9 +2,18 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import './BookAppointForm.css'
 
-export default function BookAppointForm() {
+export default function BookAppointForm(props) {
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => appointmentAdd(data)
+
+    const appointmentAdd = (info) => {
+        const Data = {
+            appointId: props.appointId,
+            peasantInfo: info
+        }
+        console.log(Data);
+        localStorage.setItem(Data)
+    }
 
     return (
         <form className='BookAppointForm' onSubmit={handleSubmit(onSubmit)}>
@@ -21,7 +30,13 @@ export default function BookAppointForm() {
 
 
             <input name="bookingDate" placeholder="DD/MM/YY" ref={register({ required: true })} />
-
+            <button
+                className='primaryBtn'
+                id='cardBtn'
+                onClick={props.handleClose}
+            >
+                Submit
+             </button>
         </form>
     );
 }
