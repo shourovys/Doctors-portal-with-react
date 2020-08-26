@@ -4,8 +4,7 @@ import Home from '../Home/Home';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 import Appointment from '../Appointment/Appointment';
 
@@ -15,10 +14,10 @@ const HomeContainer = () => {
             <Router>
                 <Navbar />
                 <Switch>
-                    <Route exact path='/'>
+                    {/* <Route exact path='/appointment'>
                         <Home />
-                    </Route>
-                    <Route exact path='/appointment'>
+                    </Route> */}
+                    <Route exact path='/'>
                         <Appointment />
                     </Route>
                 </Switch>

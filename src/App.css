@@ -1,5 +1,33 @@
 * {
   box-sizing: border-box;
-  margin-right: 0;
+  margin: 0;
   padding: 0;
+}
+
+/* ::root {
+  --primary-color: #1befdef5;
+} */
+.primary-color {
+  color: #1befdef5;
+}
+.text-center {
+  text-align: center;
+}
+
+.h-primary {
+  font-size: 42px;
+  margin: 22px 0px;
+}
+.h-seconder {
+  font-size: 35px;
+  margin: 16px 0px;
+}
+.h-third {
+  font-size: 22px !important;
+  margin: 12px 0px !important;
+}
+.paragraph {
+  font-size: 13px;
+  color: lightgray;
+  line-height: 2px;
 }

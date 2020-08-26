@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CalendarCS.css'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
@@ -13,7 +14,7 @@ function CalendarCS() {
 
     return (
         <div>
-            <Calendar
+            <Calendar className='CalendarCS'
                 onChange={onChange}
                 value={value}
             />

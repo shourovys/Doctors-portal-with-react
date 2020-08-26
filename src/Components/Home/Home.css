@@ -14,12 +14,13 @@
   content: "";
   width: 100%;
   position: absolute;
-  height: 100%;
+  height: 120%;
+  top: -127px;
   left: 0px;
   background-image: url(/static/media/Home.f112c368.png);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: -1;
 }
 .homeText P {

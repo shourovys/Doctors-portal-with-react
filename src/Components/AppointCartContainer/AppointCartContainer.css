@@ -1,0 +1,10 @@
+/* yarn add @material-ui/core@nex */
+.AppointCartContainer {
+  margin: 70px 44px 50px 34px;
+}
+.carts {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
