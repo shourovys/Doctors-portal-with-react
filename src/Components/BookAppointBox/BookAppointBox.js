@@ -29,9 +29,9 @@ const BookAppointBox = (props) => {
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+                className='dialog-box'
             >
                 <DialogTitle className='primary-color .h-third text-center' id="alert-dialog-title">{props.appointType}</DialogTitle>
-
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
 
@@ -39,11 +39,6 @@ const BookAppointBox = (props) => {
 
                     </DialogContentText>
                 </DialogContent>
-
-
-                <DialogActions>
-
-                </DialogActions>
             </Dialog>
         </div>
     );

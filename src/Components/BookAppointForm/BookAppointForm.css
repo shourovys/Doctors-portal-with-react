@@ -9,3 +9,14 @@
   margin: 10px 22px;
   width: 500px;
 }
+
+.bookSuccessfulAlert {
+  padding: 14px 20px;
+  margin: 10px 22px;
+  color: rgb(98, 255, 98);
+}
+.loading {
+  margin: 5rem 12.2rem;
+  text-align: center;
+  color: gray;
+}

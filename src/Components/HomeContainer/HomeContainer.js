@@ -14,10 +14,10 @@ const HomeContainer = () => {
             <Router>
                 <Navbar />
                 <Switch>
-                    <Route exact path='/'>
+                    {/* <Route exact path='/appointment'>
                         <Home />
-                    </Route>
-                    <Route exact path='/appointment'>
+                    </Route> */}
+                    <Route exact path='/'>
                         <Appointment />
                     </Route>
                 </Switch>
