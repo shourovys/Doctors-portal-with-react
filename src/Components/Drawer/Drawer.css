@@ -1,0 +1,27 @@
+.drawer {
+  height: 100vh;
+  width: 20vw;
+  background: linear-gradient(to right, #18d0e7f5, #1befdef5);
+  margin-right: 2px;
+}
+.drawer > ul {
+  margin-left: 8px;
+  padding-top: 45px;
+}
+.drawer li {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.icon {
+  margin: 8px;
+}
+link {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+}

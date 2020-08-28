@@ -7,18 +7,27 @@ import {
     Route
 } from "react-router-dom";
 import Appointment from '../Appointment/Appointment';
+import DoctorAppointments from '../DoctorAppointments/DoctorAppointments';
 
 const HomeContainer = () => {
     return (
         <div>
             <Router>
-                <Navbar />
+
                 <Switch>
-                    {/* <Route exact path='/appointment'>
+                    {/* <Route exact path='/'>
                         <Home />
+                         <Navbar />
+                    </Route> */}
+                    {/* <Route exact path='/appointment'>
+                        <Appointment />
+                         <Navbar />
+                    </Route> */}
+                    {/* <Route exact path='/doctor/appointment'>
+                        <DoctorAppointments/>
                     </Route> */}
                     <Route exact path='/'>
-                        <Appointment />
+                        <DoctorAppointments />
                     </Route>
                 </Switch>
             </Router>
