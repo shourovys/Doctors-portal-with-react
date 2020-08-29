@@ -9,6 +9,8 @@ import BookAppointForm from '../BookAppointForm/BookAppointForm';
 import './BookAppointBox.css'
 
 const BookAppointBox = (props) => {
+    const { appointType, time, spences, id } = props.appointment
+    const appointment = props.appointment
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -31,11 +33,11 @@ const BookAppointBox = (props) => {
                 aria-describedby="alert-dialog-description"
                 className='dialog-box'
             >
-                <DialogTitle className='primary-color .h-third text-center' id="alert-dialog-title">{props.appointType}</DialogTitle>
+                <DialogTitle className='primary-color .h-third text-center' id="alert-dialog-title">{appointType}</DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
 
-                        <BookAppointForm appointId={props.appointId} handleClose={handleClose} />
+                        <BookAppointForm appointment={appointment} key={id} handleClose={handleClose} />
 
                     </DialogContentText>
                 </DialogContent>

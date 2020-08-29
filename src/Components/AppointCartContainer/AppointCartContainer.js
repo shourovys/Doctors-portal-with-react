@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './AppointCartContainer.css'
 import AppointmentsCart from '../AppointmentsCart/AppointmentsCart';
 import AppointmentsData from '../../FakeData/FakeData';
+import { useDate } from '../useDate/useDate';
 
 const AppointCartContainer = () => {
     const [appointmentData, setAppointmentData] = useState([])
     // const appointmentData = AppointmentsData
+    const [date, setDate] = useDate()
 
     useEffect(() => {
         fetch('http://localhost:4200/appointment')
@@ -15,7 +17,7 @@ const AppointCartContainer = () => {
 
     return (
         <div className='AppointCartContainer'>
-            <h1 className='primary-color text-center h-seconder'>Available Appointment on Friday </h1>
+            <h1 className='primary-color text-center h-seconder'>Available Appointment on {date} </h1>
             <div className="carts">
                 {
                     appointmentData &&

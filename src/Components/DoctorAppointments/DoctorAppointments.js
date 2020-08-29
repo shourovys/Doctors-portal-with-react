@@ -6,10 +6,10 @@ import DoctorAppointmentsDataCon from '../DoctorAppointmentsDataCon/DoctorAppoin
 
 const DoctorAppointments = () => {
     return (
-        <div class='DoctorAppointments'>
+        <div className='DoctorAppointments'>
             <Drawer />
             <div className="DoctorAppointments-data">
-                <h2 class='h-seconder'>Appointments</h2>
+                <h2 className='h-seconder'>Appointments</h2>
                 <div className="tow-part-container">
                     <div className="left-side">
                         <CalendarCS />

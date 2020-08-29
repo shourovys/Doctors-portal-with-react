@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import './BookAppointForm.css'
-import Alert from '@material-ui/lab/Alert';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import { useDate } from "../useDate/useDate";
 
 export default function BookAppointForm(props) {
     const [isLoading, setIsLoading] = useState(null)
     const [bookId, setBookId] = useState(null)
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => appointmentAdd(data)
-    const appointmentBookingData = localStorage.getItem('date')
+
+    const [date, setDate] = useDate()
 
 
 
     const appointmentAdd = (info) => {
         setIsLoading(true)
         const Data = {
-            appointId: props.appointId,
-            appointmentBookingData: appointmentBookingData,
-            peasantInfo: info
+            appointmentInfo: props.appointment,
+            appointmentBookingData: date,
+            peasantInfo: info,
+            action: 'Not visited'
+
         }
 
         fetch('http://localhost:4200/bookAppointment', {
@@ -68,7 +71,7 @@ export default function BookAppointForm(props) {
                                     <input name="peasantEmail" placeholder="Enter Your Email Address" ref={register({ required: true })} />
 
 
-                                    <input name="bookingDate" placeholder="DD/MM/YY" ref={register({ required: true })} defaultValue={appointmentBookingData} />
+                                    <input name="bookingDate" placeholder="DD/MM/YY" ref={register({ required: true })} defaultValue={date} />
                                     <button
                                         className='primaryBtn'
                                         id='cardBtn'

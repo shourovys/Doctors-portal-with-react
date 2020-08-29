@@ -1,17 +1,47 @@
 import React from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
+import { useEffect } from 'react';
 
 
 
-const Selector = () => {
+const Selector = (props) => {
+
+    const bookingId = props.id
 
     const [action, setAction] = React.useState('');
-    console.log(action);
 
     const handleChange = (event) => {
         setAction(event.target.value);
     };
+
+    const query = {
+        action: action,
+        bookingId: bookingId
+    }
+    console.log('bookingId is', bookingId);
+
+
+    // useEffect(() => {
+
+    // }, [action])
+
+    if (action) {
+        fetch('http://localhost:4200/updateAppointment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(query),
+        })
+            .then(response => response.json())
+            .then(data =>
+                console.log('Success:')
+            )
+    }
+
+
+
 
     const style = {
         color: 'white',
@@ -23,11 +53,11 @@ const Selector = () => {
             <FormControl className='primaryBtn' id='selectorBtn' >
                 <NativeSelect
                     style={style}
-                    // labelId="demo-simple-select-label"
-                    // id="demo-simple-select"
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
                     value={action}
                     onChange={handleChange}
-                    defaultValue={'Not visited'}
+                    defaultValue={props.preAction}
 
                 >
                     <option style={{ color: 'black' }} value={'Not visited'}>Not visited</option>

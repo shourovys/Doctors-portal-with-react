@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 
 const AppointmentsCart = (props) => {
     const { appointType, time, spences, id } = props.appointment
-
+    const appointment = props.appointment
 
 
     const classes = useStyles();
@@ -41,7 +41,7 @@ const AppointmentsCart = (props) => {
 
 
             <CardActions >
-                <BookAppointBox appointType={appointType} appointId={id} />
+                <BookAppointBox appointment={appointment} />
             </CardActions>
 
         </Card>

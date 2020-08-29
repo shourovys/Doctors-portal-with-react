@@ -9,6 +9,7 @@ const Appointment = () => {
 
     return (
         <div>
+
             <div className="vewHeight bg">
                 <div className="appointment-calender">
                     <h1 className='h-primary'>Appointment</h1>

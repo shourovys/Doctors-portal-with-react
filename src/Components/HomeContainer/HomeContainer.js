@@ -8,29 +8,34 @@ import {
 } from "react-router-dom";
 import Appointment from '../Appointment/Appointment';
 import DoctorAppointments from '../DoctorAppointments/DoctorAppointments';
+import DateContextProvider from '../useDate/useDate';
 
 const HomeContainer = () => {
     return (
         <div>
-            <Router>
+            <DateContextProvider>
+                <Router>
 
-                <Switch>
-                    {/* <Route exact path='/'>
-                        <Home />
-                         <Navbar />
-                    </Route> */}
-                    {/* <Route exact path='/appointment'>
-                        <Appointment />
-                         <Navbar />
-                    </Route> */}
-                    {/* <Route exact path='/doctor/appointment'>
-                        <DoctorAppointments/>
-                    </Route> */}
-                    <Route exact path='/'>
-                        <DoctorAppointments />
-                    </Route>
-                </Switch>
-            </Router>
+                    <Switch>
+                        <Route exact path='/'>
+                            <Navbar />
+                            <Home />
+                        </Route>
+                        <Route exact path='/appointment'>
+                            <Navbar />
+                            <Appointment />
+                        </Route>
+
+                        <Route exact path='/doctor/appointment'>
+                            <DoctorAppointments />
+                        </Route>
+                        {/* <Route exact path='/'>
+                            <DoctorAppointments />
+                        </Route> */}
+
+                    </Switch>
+                </Router>
+            </DateContextProvider>
         </div>
     );
 };
