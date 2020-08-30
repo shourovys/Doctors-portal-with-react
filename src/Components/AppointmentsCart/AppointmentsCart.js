@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 });
 
 const AppointmentsCart = (props) => {
-    const { appointType, time, spences, id } = props.appointment
+    const { appointType, time, spences } = props.appointment
     const appointment = props.appointment
 
 

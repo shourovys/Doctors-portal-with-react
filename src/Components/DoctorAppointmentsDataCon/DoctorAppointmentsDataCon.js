@@ -13,9 +13,11 @@ const DoctorAppointmentsDataCon = () => {
     const [date, setDate] = useDate()
 
     useEffect(() => {
-        fetch(`http://localhost:4200/getAppointments/${date}`)
-            .then(res => res.json())
-            .then(data => setBookingData(data))
+        if (date) {
+            fetch(`https://shielded-falls-27055.herokuapp.com/getAppointments/${date}`)
+                .then(res => res.json())
+                .then(data => setBookingData(data))
+        }
     }, [date])
 
 

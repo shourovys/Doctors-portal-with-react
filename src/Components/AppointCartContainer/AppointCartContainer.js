@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './AppointCartContainer.css'
 import AppointmentsCart from '../AppointmentsCart/AppointmentsCart';
-import AppointmentsData from '../../FakeData/FakeData';
 import { useDate } from '../useDate/useDate';
 
 const AppointCartContainer = () => {
     const [appointmentData, setAppointmentData] = useState([])
-    // const appointmentData = AppointmentsData
     const [date, setDate] = useDate()
 
     useEffect(() => {
-        fetch('http://localhost:4200/appointment')
+        fetch('https://shielded-falls-27055.herokuapp.com/appointment')
             .then(res => res.json())
             .then(data => setAppointmentData(data))
     }, [])

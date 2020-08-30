@@ -1,7 +1,6 @@
 import React from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
-import { useEffect } from 'react';
 
 
 
@@ -27,7 +26,7 @@ const Selector = (props) => {
     // }, [action])
 
     if (action) {
-        fetch('http://localhost:4200/updateAppointment', {
+        fetch('https://shielded-falls-27055.herokuapp.com/updateAppointment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

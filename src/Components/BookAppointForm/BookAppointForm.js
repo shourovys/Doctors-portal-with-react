@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import './BookAppointForm.css'
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import { useDate } from "../useDate/useDate";
 
 export default function BookAppointForm(props) {
@@ -24,7 +23,7 @@ export default function BookAppointForm(props) {
 
         }
 
-        fetch('http://localhost:4200/bookAppointment', {
+        fetch('https://shielded-falls-27055.herokuapp.com/bookAppointment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
